@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+
+    <div class="container">
+      <div class="row" id="create-account-row">
+        <div class="col-xs-12">
+          <h3>Create an Account:</h3>
+          <form action="/create-account" method="POST" data-parsley-validate>
+            <div id="inputs">
+              <div>
+                <label for="username">Username: </label>
+                <input type="text" name="username" data-parsley-required maxlength="25">
+              </div>
+              <div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="pw" data-parsley-required data-parsley-minlength="8" data-parsley-minlength-message="Password must be 8-25 characters." maxlength="25">
+              </div>
+              <div>
+                <label for="password">Confirm Password: </label>
+                <input type="password" name="password-confirmation" data-parsley-required data-parsley-equalto="#pw" data-parsley-equalto-message="Passwords do not match." maxlength="25">
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+<% include ./partials/footer %>
