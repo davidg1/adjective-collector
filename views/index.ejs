@@ -1,0 +1,65 @@
+<% include ./partials/header %>
+
+    <div class="container" id="adjective-search-container">
+      <div class="row" id="adjective-search-row">
+        <div class="col-xs-12 col-md-offset-3 col-md-6" id="adjective-search">
+          <h3>Search for an adjective:</h3>
+          <form action="" method="get" id="adjective-search-form">
+            <input type="text" name="word" id="adjective-input" maxlength="25">
+            <button type="submit" id="get-adjective-info-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <a href="https://www.wordnik.com"><img src="/images/wordnik_badge_a2.png" alt="powered by wordnik attribution"></a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="adjective-info-container">
+      <div class="row" id="adjective-info-row">
+        <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" id="adjective-info-col">
+          <h3 id="adjective-info-heading">Adjective Info Heading</h3>
+          <h4 id="source-dictionary">Source Dictionary</h4>
+          <ol id="adjective-info">Adjective Info</ol>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-3 col-md-6" id="book">
+          <img src="/images/book.jpg" alt="book" class="img-responsive">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row" id="collection-prompts-row">
+        <div class="col-xs-12 col-md-offset-3 col-md-6">
+          <% if (!currentUser) { %>
+            <div id="not-logged-in-group">
+              <h4 id="cannot-save-msg">Log in to save adjectives to your collection.</h4>
+              <a href="/sign-in" role="button" class="btn btn-default">Log In</a>
+            </div>
+          <% } else { %>
+            <div id="logged-in-group">
+              <h4 id="adjective-in-collection-message">This adjective is already in your collection.</h4>
+
+              <div id="adjective-saved-message-group">
+                <h4>Successfully saved to your collection!</h4>
+                <a href="/user-adjective-collection" role="button" class="btn btn-default">Go to your collection</a>
+              </div>
+
+              <form action="/add-adjective-to-database" method="POST" id="add-adjective-form">
+                <div id="add-adjective-checkbox-group">
+                  <input type="checkbox" name="add-adjective-checkbox" id="add-adjective-checkbox">
+                  <label for="add-adjective-checkbox">Add this word to your adjective collection?</label>
+                </div>
+                <div id="example-input-group">
+                  <p>First create an example phrase using this adjective:</p>
+                  <input type="text" name="example-phrase" id="example-phrase-input" placeholder="Enter example phrase....." maxlength="200">
+                </div>
+                <button type="submit" class="btn btn-default" id="add-adjective-button">Add to Collection</button>
+              </form>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,527 @@
+$beige: #dabd9f;
+$paleOrange: #fbede2;
+$lightOrange: #fac59d;
+$orange: #f38a2b;
+$darkOrange: #d45300;
+$brightOrange: #ff5106;
+$palePurple: #decae8;
+$lightPurple: #896d95;
+$purple: #663b79;
+$darkPurple: #441858;
+$brightMagenta: #f745eb;
+$paleRed: #ffcbcb;
+$red: #f00;
+
+
+@mixin buttonColors ($element, $backgroundColor, $textColor, $focusColor, $hoverColor) {
+  #{$element} {
+    background-color: $backgroundColor;
+    color: $textColor;
+    border-color: darken($backgroundColor, 8%);
+
+    &:focus {
+      outline-color: $focusColor;
+    }
+
+    &:hover {
+      color: $hoverColor;
+    }
+
+    &:active {
+      background-color: darken($backgroundColor, 8%);
+    }
+  }
+}
+
+
+
+body {
+  background-color: lighten($lightPurple, 15%);
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+/************************ Navigation Bar Style Rules **************************/
+#navbar-row {
+  background-color: $darkPurple;
+}
+
+.navbar {
+  background-color: $darkPurple;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: $palePurple;
+
+  &:focus {
+    outline-color: $brightMagenta;
+  }
+
+  &:active {
+    background-color: darken($darkPurple, 8%);
+  }
+}
+
+.navbar-right li:last-of-type {
+  margin-right: 23px;
+}
+
+.navbar-inverse .navbar-toggle {
+  & .icon-bar {
+    background-color: $palePurple;
+  }
+
+  &:focus, &:hover {
+    background-color: darken($darkPurple, 3%);
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+}
+
+#logged-in-name {
+  color: $brightMagenta;
+  font-weight: 900;
+  padding: 0 15px;
+  margin-top: 16px;
+}
+
+
+
+/********************** Logo/Flash Messages Style Rules ***********************/
+#logo-row {
+  background-color: #cfb39e;
+  background-image: url("../images/bokeh-background.jpg");
+
+  a:focus {
+    outline-color: $brightMagenta;
+  }
+}
+
+.flash-message-row {
+  background-color: $lightOrange;
+  padding-top: 20px;
+}
+
+.alert {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#flash-success-message-row {
+  padding-bottom: 20px;
+}
+
+
+
+/********************** Logo/Flash Messages Style Rules ***********************/
+#adjective-search-row {
+  background-color: #be8f75;
+  background-image: url("../images/owls-background.jpg");
+  text-align: center;
+  padding-bottom: 32px;
+
+  h3 {
+    color: $paleOrange;
+    margin-top: 30px;
+  }
+
+  form {
+    display: inline-block;
+
+    a {
+      display: block;
+      margin-top: 50px;
+    }
+  }
+}
+
+
+
+/*********************** Adjective Search Style Rules *************************/
+#adjective-input, #get-adjective-info-button {
+  box-sizing: content-box;
+  height: 32px;
+  border: 6px solid $lightOrange;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#adjective-input {
+  float: left;
+  background-color: $paleOrange;
+  color: $purple;
+  border-right: none;
+  font-size: 18px;
+  font-weight: 900;
+  padding-left: 5px;
+}
+
+#get-adjective-info-button {
+  float: left;
+  background-color: $orange;
+  color: $paleOrange;
+  border-left: none;
+  width: 30px;
+}
+
+#adjective-input:focus {
+  background-color: #f2eaf6;
+  outline: none;
+}
+
+#get-adjective-info-button:focus {
+  outline-color: darken($orange, 15%);
+}
+
+#get-adjective-info-button:active {
+  background-color: darken($orange, 12%);
+}
+
+
+
+/*********************** Adjective Info Style Rules *************************/
+#adjective-info-container, #adjective-info-heading, #source-dictionary, #adjective-info {
+  display: none;
+}
+
+#adjective-info-container {
+  background-color: $lightOrange;
+}
+
+#adjective-info-col {
+  background-color: $orange;
+  color: $paleOrange;
+  border-radius: 30px;
+  padding: 20px 40px 15px 25px;
+  margin-top: 25px;
+
+  h3 {
+    margin: 0 0 7px 27px;
+  }
+
+  h4 {
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 100;
+    margin: 0 0 10px 27px;
+    text-decoration: underline;
+  }
+}
+
+#book {
+  text-align: center;
+  padding-bottom: 10px;
+
+  img {
+    display: inline-block;
+  }
+}
+
+
+
+/************ Prompts to Add Adjective to Collection Style Rules **************/
+#collection-prompts-row, #adjective-in-collection-message,  #adjective-saved-message-group, #add-adjective-form, #example-input-group, #add-adjective-button  {
+  display: none;
+}
+
+#collection-prompts-row {
+  background-color: $lightOrange;
+  margin-bottom: 50px;
+
+  h4 {
+    color: $darkOrange;
+  }
+
+  form {
+    color: $purple;
+    padding-bottom: 30px;
+  }
+
+  @include buttonColors (a, $darkOrange, $paleOrange, $brightOrange, #fff);
+  @include buttonColors (button, $darkPurple, $palePurple, $brightMagenta, #fff);
+}
+
+#not-logged-in-group, #logged-in-group {
+  text-align: center;
+}
+
+#not-logged-in-group {
+  padding-bottom: 25px;
+  margin-top: 14px;
+}
+
+#adjective-in-collection-message, #adjective-saved-message-group {
+  margin: 14px 0 27px;
+}
+
+#add-adjective-checkbox-group {
+  padding-top: 15px;
+
+  input {
+    width: 21px;
+    height: 21px;
+
+    &:focus {
+      outline-color: $brightMagenta;
+    }
+  }
+
+  label {
+    vertical-align: middle;
+    margin-bottom: 11px;
+  }
+}
+
+#example-input-group {
+  p {
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  input {
+    background-color: $palePurple;
+    color: $darkPurple;
+    border: 2px solid $darkPurple;
+    width: 400px;
+    height: 35px;
+    font-weight: 500;
+    padding-left: 3px;
+
+    &:focus {
+      outline-color: $brightMagenta;
+    }
+  }
+}
+
+#add-adjective-button {
+  margin-top: 8px;
+}
+
+
+
+/*********************** Collection View Style Rules **************************/
+#adjective-collection-row {
+  color: $paleOrange;
+  background-color: #be8f75;
+  background-image: url("../images/owls-background.jpg");
+  text-align: center;
+  padding-bottom: 20px;
+
+  h1 {
+    margin-bottom: 4px;
+
+    & + p {
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+  }
+
+  a {
+    padding-left: 25px;
+  }
+
+  li {
+    padding-right: 20px;
+  }
+}
+
+#collection-accordion {
+  text-align: left;
+}
+
+.panel-body {
+  h4 {
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 100;
+    margin: 4px 0 10px 27px;
+    text-decoration: underline;
+  }
+
+  p {
+    font-weight: 700;
+    margin: 15px 20px 12px 25px;
+  }
+
+  form {
+    text-align: center;
+  }
+}
+
+.panel:nth-of-type(odd) {
+  .panel-heading {
+    background-color: darken($palePurple, 3%);
+    color: $darkPurple;
+    border-color: $darkPurple;
+
+    a:focus {
+      outline-color: $brightMagenta;
+    }
+  }
+
+  .panel-body {
+    background-color: lighten($purple, 17%);
+    color: $palePurple;
+    border-color: $darkPurple;
+    
+    p {
+      color: darken($darkPurple, 8%);
+    }
+
+    @include buttonColors (button, $darkPurple, $palePurple, $brightMagenta, #fff)
+  }
+}
+
+.panel:nth-of-type(even) {
+  .panel-heading {
+    background-color: darken($paleOrange, 7%);
+    color: $darkOrange;
+    border-color: $darkOrange;
+
+    a:focus {
+      outline-color: $brightOrange;
+    }
+  }
+
+  .panel-body {
+    background-color: $orange;
+    color: $paleOrange;
+    border-color: $darkOrange;
+
+    p {
+      color: darken($darkOrange, 12%);
+    }
+
+    @include buttonColors (button, $darkOrange, $paleOrange, $brightOrange, #fff)
+  }
+}
+
+
+
+/***************** Create Account/Sign In View Style Rules ********************/
+#create-account-row, #sign-in-row {
+  background-color: $lightOrange;
+  color: $darkOrange;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 30px;
+
+  form {
+    margin-top: 12px;
+  }
+
+  input {
+    color: $darkOrange;
+    border: 1px solid $darkOrange;
+    width: 170px;
+    padding-left: 3px;
+    margin-top: 4px;
+
+    &:focus {
+      outline-color: $brightOrange;
+    }
+  }
+
+  button {
+    margin-top: 13px;
+  }
+
+  @include buttonColors (button, $darkOrange, $paleOrange, $brightOrange, #fff);
+}
+
+#inputs {
+  display: inline-block;
+  text-align: right;
+}
+
+
+
+/********************* Account Created View Style Rules ***********************/
+#account-created-row {
+  background-color: $lightPurple;
+  color: $darkPurple;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 30px;
+
+  p {
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  a {
+    margin-top: 15px;
+  }
+
+  .highlight {
+    color: $lightOrange;
+    font-weight: 400;
+  }
+
+  @include buttonColors (a, $darkPurple, $palePurple, $brightMagenta, #fff);
+}
+
+
+
+/************************ Logged Out View Style Rules *************************/
+#logged-out-row {
+  background-color: $palePurple;
+  color: $purple;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 20px;
+
+  p {
+    font-weight: 500;
+  }
+}
+
+
+
+/*********************** URL Not Found Style Rules ****************************/
+#not-found-row {
+  color: $darkPurple;
+  text-align: center;
+
+  p {
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
+
+
+/************************** Parsley JS Style Rules ****************************/
+#create-account-row .parsley-error, #example-input-group .parsley-error {
+  background-color: $paleRed;
+  color: $red;
+  border: 2px solid $red;
+}
+
+.parsley-errors-list {
+  list-style-type: none;
+  font-size: 0.9em;
+  padding: 0;
+  margin-bottom: 12px;
+
+  li {
+    color: $red;
+    font-weight: 700;
+  }
+}
+
+#example-input-group .parsley-errors-list {
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+
+#inputs .parsley-errors-list {
+  text-align: center;
+}
+

@@ -1,0 +1,491 @@
+body {
+  background-color: #ad99b5;
+  font-family: "Roboto", sans-serif;
+}
+
+/************************ Navigation Bar Style Rules **************************/
+#navbar-row {
+  background-color: #441858;
+}
+
+.navbar {
+  background-color: #441858;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: #decae8;
+}
+.navbar-inverse .navbar-nav li a:focus {
+  outline-color: #f745eb;
+}
+.navbar-inverse .navbar-nav li a:active {
+  background-color: #2b0f38;
+}
+
+.navbar-right li:last-of-type {
+  margin-right: 23px;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #decae8;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: #3b154c;
+}
+.navbar-inverse .navbar-toggle:focus .icon-bar, .navbar-inverse .navbar-toggle:hover .icon-bar {
+  background-color: #fff;
+}
+
+#logged-in-name {
+  color: #f745eb;
+  font-weight: 900;
+  padding: 0 15px;
+  margin-top: 16px;
+}
+
+/********************** Logo/Flash Messages Style Rules ***********************/
+#logo-row {
+  background-color: #cfb39e;
+  background-image: url("../images/bokeh-background.jpg");
+}
+#logo-row a:focus {
+  outline-color: #f745eb;
+}
+
+.flash-message-row {
+  background-color: #fac59d;
+  padding-top: 20px;
+}
+
+.alert {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#flash-success-message-row {
+  padding-bottom: 20px;
+}
+
+/********************** Logo/Flash Messages Style Rules ***********************/
+#adjective-search-row {
+  background-color: #be8f75;
+  background-image: url("../images/owls-background.jpg");
+  text-align: center;
+  padding-bottom: 32px;
+}
+#adjective-search-row h3 {
+  color: #fbede2;
+  margin-top: 30px;
+}
+#adjective-search-row form {
+  display: inline-block;
+}
+#adjective-search-row form a {
+  display: block;
+  margin-top: 50px;
+}
+
+/*********************** Adjective Search Style Rules *************************/
+#adjective-input, #get-adjective-info-button {
+  box-sizing: content-box;
+  height: 32px;
+  border: 6px solid #fac59d;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#adjective-input {
+  float: left;
+  background-color: #fbede2;
+  color: #663b79;
+  border-right: none;
+  font-size: 18px;
+  font-weight: 900;
+  padding-left: 5px;
+}
+
+#get-adjective-info-button {
+  float: left;
+  background-color: #f38a2b;
+  color: #fbede2;
+  border-left: none;
+  width: 30px;
+}
+
+#adjective-input:focus {
+  background-color: #f2eaf6;
+  outline: none;
+}
+
+#get-adjective-info-button:focus {
+  outline-color: #c6640b;
+}
+
+#get-adjective-info-button:active {
+  background-color: #d56b0c;
+}
+
+/*********************** Adjective Info Style Rules *************************/
+#adjective-info-container, #adjective-info-heading, #source-dictionary, #adjective-info {
+  display: none;
+}
+
+#adjective-info-container {
+  background-color: #fac59d;
+}
+
+#adjective-info-col {
+  background-color: #f38a2b;
+  color: #fbede2;
+  border-radius: 30px;
+  padding: 20px 40px 15px 25px;
+  margin-top: 25px;
+}
+#adjective-info-col h3 {
+  margin: 0 0 7px 27px;
+}
+#adjective-info-col h4 {
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 100;
+  margin: 0 0 10px 27px;
+  text-decoration: underline;
+}
+
+#book {
+  text-align: center;
+  padding-bottom: 10px;
+}
+#book img {
+  display: inline-block;
+}
+
+/************ Prompts to Add Adjective to Collection Style Rules **************/
+#collection-prompts-row, #adjective-in-collection-message, #adjective-saved-message-group, #add-adjective-form, #example-input-group, #add-adjective-button {
+  display: none;
+}
+
+#collection-prompts-row {
+  background-color: #fac59d;
+  margin-bottom: 50px;
+}
+#collection-prompts-row h4 {
+  color: #d45300;
+}
+#collection-prompts-row form {
+  color: #663b79;
+  padding-bottom: 30px;
+}
+#collection-prompts-row a {
+  background-color: #d45300;
+  color: #fbede2;
+  border-color: #ab4300;
+}
+#collection-prompts-row a:focus {
+  outline-color: #ff5106;
+}
+#collection-prompts-row a:hover {
+  color: #fff;
+}
+#collection-prompts-row a:active {
+  background-color: #ab4300;
+}
+#collection-prompts-row button {
+  background-color: #441858;
+  color: #decae8;
+  border-color: #2b0f38;
+}
+#collection-prompts-row button:focus {
+  outline-color: #f745eb;
+}
+#collection-prompts-row button:hover {
+  color: #fff;
+}
+#collection-prompts-row button:active {
+  background-color: #2b0f38;
+}
+
+#not-logged-in-group, #logged-in-group {
+  text-align: center;
+}
+
+#not-logged-in-group {
+  padding-bottom: 25px;
+  margin-top: 14px;
+}
+
+#adjective-in-collection-message, #adjective-saved-message-group {
+  margin: 14px 0 27px;
+}
+
+#add-adjective-checkbox-group {
+  padding-top: 15px;
+}
+#add-adjective-checkbox-group input {
+  width: 21px;
+  height: 21px;
+}
+#add-adjective-checkbox-group input:focus {
+  outline-color: #f745eb;
+}
+#add-adjective-checkbox-group label {
+  vertical-align: middle;
+  margin-bottom: 11px;
+}
+
+#example-input-group p {
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+#example-input-group input {
+  background-color: #decae8;
+  color: #441858;
+  border: 2px solid #441858;
+  width: 400px;
+  height: 35px;
+  font-weight: 500;
+  padding-left: 3px;
+}
+#example-input-group input:focus {
+  outline-color: #f745eb;
+}
+
+#add-adjective-button {
+  margin-top: 8px;
+}
+
+/*********************** Collection View Style Rules **************************/
+#adjective-collection-row {
+  color: #fbede2;
+  background-color: #be8f75;
+  background-image: url("../images/owls-background.jpg");
+  text-align: center;
+  padding-bottom: 20px;
+}
+#adjective-collection-row h1 {
+  margin-bottom: 4px;
+}
+#adjective-collection-row h1 + p {
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+#adjective-collection-row a {
+  padding-left: 25px;
+}
+#adjective-collection-row li {
+  padding-right: 20px;
+}
+
+#collection-accordion {
+  text-align: left;
+}
+
+.panel-body h4 {
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 100;
+  margin: 4px 0 10px 27px;
+  text-decoration: underline;
+}
+.panel-body p {
+  font-weight: 700;
+  margin: 15px 20px 12px 25px;
+}
+.panel-body form {
+  text-align: center;
+}
+
+.panel:nth-of-type(odd) .panel-heading {
+  background-color: #d7bfe3;
+  color: #441858;
+  border-color: #441858;
+}
+.panel:nth-of-type(odd) .panel-heading a:focus {
+  outline-color: #f745eb;
+}
+.panel:nth-of-type(odd) .panel-body {
+  background-color: #965baf;
+  color: #decae8;
+  border-color: #441858;
+}
+.panel:nth-of-type(odd) .panel-body p {
+  color: #2b0f38;
+}
+.panel:nth-of-type(odd) .panel-body button {
+  background-color: #441858;
+  color: #decae8;
+  border-color: #2b0f38;
+}
+.panel:nth-of-type(odd) .panel-body button:focus {
+  outline-color: #f745eb;
+}
+.panel:nth-of-type(odd) .panel-body button:hover {
+  color: #fff;
+}
+.panel:nth-of-type(odd) .panel-body button:active {
+  background-color: #2b0f38;
+}
+
+.panel:nth-of-type(even) .panel-heading {
+  background-color: #f7dac3;
+  color: #d45300;
+  border-color: #d45300;
+}
+.panel:nth-of-type(even) .panel-heading a:focus {
+  outline-color: #ff5106;
+}
+.panel:nth-of-type(even) .panel-body {
+  background-color: #f38a2b;
+  color: #fbede2;
+  border-color: #d45300;
+}
+.panel:nth-of-type(even) .panel-body p {
+  color: #973b00;
+}
+.panel:nth-of-type(even) .panel-body button {
+  background-color: #d45300;
+  color: #fbede2;
+  border-color: #ab4300;
+}
+.panel:nth-of-type(even) .panel-body button:focus {
+  outline-color: #ff5106;
+}
+.panel:nth-of-type(even) .panel-body button:hover {
+  color: #fff;
+}
+.panel:nth-of-type(even) .panel-body button:active {
+  background-color: #ab4300;
+}
+
+/***************** Create Account/Sign In View Style Rules ********************/
+#create-account-row, #sign-in-row {
+  background-color: #fac59d;
+  color: #d45300;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 30px;
+}
+#create-account-row form, #sign-in-row form {
+  margin-top: 12px;
+}
+#create-account-row input, #sign-in-row input {
+  color: #d45300;
+  border: 1px solid #d45300;
+  width: 170px;
+  padding-left: 3px;
+  margin-top: 4px;
+}
+#create-account-row input:focus, #sign-in-row input:focus {
+  outline-color: #ff5106;
+}
+#create-account-row button, #sign-in-row button {
+  margin-top: 13px;
+}
+#create-account-row button, #sign-in-row button {
+  background-color: #d45300;
+  color: #fbede2;
+  border-color: #ab4300;
+}
+#create-account-row button:focus, #sign-in-row button:focus {
+  outline-color: #ff5106;
+}
+#create-account-row button:hover, #sign-in-row button:hover {
+  color: #fff;
+}
+#create-account-row button:active, #sign-in-row button:active {
+  background-color: #ab4300;
+}
+
+#inputs {
+  display: inline-block;
+  text-align: right;
+}
+
+/********************* Account Created View Style Rules ***********************/
+#account-created-row {
+  background-color: #896d95;
+  color: #441858;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 30px;
+}
+#account-created-row p {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+#account-created-row a {
+  margin-top: 15px;
+}
+#account-created-row .highlight {
+  color: #fac59d;
+  font-weight: 400;
+}
+#account-created-row a {
+  background-color: #441858;
+  color: #decae8;
+  border-color: #2b0f38;
+}
+#account-created-row a:focus {
+  outline-color: #f745eb;
+}
+#account-created-row a:hover {
+  color: #fff;
+}
+#account-created-row a:active {
+  background-color: #2b0f38;
+}
+
+/************************ Logged Out View Style Rules *************************/
+#logged-out-row {
+  background-color: #decae8;
+  color: #663b79;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 20px;
+}
+#logged-out-row p {
+  font-weight: 500;
+}
+
+/*********************** URL Not Found Style Rules ****************************/
+#not-found-row {
+  color: #441858;
+  text-align: center;
+}
+#not-found-row p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/************************** Parsley JS Style Rules ****************************/
+#create-account-row .parsley-error, #example-input-group .parsley-error {
+  background-color: #ffcbcb;
+  color: #f00;
+  border: 2px solid #f00;
+}
+
+.parsley-errors-list {
+  list-style-type: none;
+  font-size: 0.9em;
+  padding: 0;
+  margin-bottom: 12px;
+}
+.parsley-errors-list li {
+  color: #f00;
+  font-weight: 700;
+}
+
+#example-input-group .parsley-errors-list {
+  margin-top: 1px;
+  margin-bottom: 0;
+}
+
+#inputs .parsley-errors-list {
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

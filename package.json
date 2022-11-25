@@ -1,0 +1,32 @@
+{
+  "name": "adjective-collector",
+  "version": "1.0.0",
+  "description": "An application for collecting adjectives.  Definitions provided by Wordnik.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser-sync": "browser-sync start --proxy \"localhost:3000\" --files \"public/*.html, public/css/*.css, public/js/*.js, views/*.ejs, views/partials/*.ejs\""
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-sanitizer": "^1.0.2",
+    "express-session": "^1.15.6",
+    "helmet": "^3.9.0",
+    "lodash.sortby": "^4.7.0",
+    "mongoose": "^4.13.6",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.4.5"
+  }
+}

@@ -1,0 +1,39 @@
+<% include ./partials/header %>
+
+    <div class="container" id="adjective-collection-container">
+      <div class="row" id="adjective-collection-row">
+        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+          <h1>Adjective Collection</h1>
+          <p>Click on an adjective to see details</p>
+
+          <div class="panel-group" id="collection-accordion" role="tablist" aria-multiselectable="true">
+            <% adjectiveCollection.forEach(function (adjectiveData, index) { %>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-<%= index %>">
+                  <h4 class="panel-title">
+                    <a href="#collapse-<%= index %>" role="button" data-toggle="collapse" data-parent="#collection-accordion" aria-expanded="true" aria-controls="collapse-<%= index %>" id="adj-word-link-<%= index %>">
+                      <%= adjectiveData.word %>
+                    </a>
+                  </h4>
+                </div>
+                <div class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<%= index %>" id="collapse-<%= index %>">
+                  <div class="panel-body">
+                    <h4 class="collection-source"></h4>
+                    <ol class="collection-definitions"></ol>
+                    <p class="collection-example">Example phrase: &nbsp;<%= adjectiveData.userCreatedExample %></p>
+
+                    <form id="delete-adjective-form-<%= index %>">
+                      <!-- This hidden input's value is set to the adjective subdocument's objectID.  Will be used for deletion from the collection. -->
+                      <input type="hidden" value="<%= adjectiveData.id %>" id="adjective-document-id-<%= index %>">
+                      <button type="submit" class="btn btn-default">Delete from Collection</button>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+      </div>
+    </div>
+
+<% include ./partials/footer %>
